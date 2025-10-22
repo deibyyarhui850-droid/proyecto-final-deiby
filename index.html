@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Premium</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <span style="font-size: 40px;">🍕</span>
+                Pizza Premium
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#promociones">Ofertas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#carrito">Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Pizza Premium</h1>
+            <p>Las mejores pizzas artesanales con ingredientes premium</p>
+            <div class="cta-buttons">
+                <li><a href="#menu"><button class="btn-primary">Ver Menú</button></a></li>
+                <li><a href="#bebidas"><button class="btn-primary" style="background: #2196f3;">Ver Bebidas</button></a></li>
+            </div>
+        </div>
+    </section>
+
+       <!-- Featured Pizzas -->
+    <section class="featured" id="menu">
+        <div class="container">
+            <h2 class="section-title">Nuestras Pizzas Estrella</h2>
+            <div class="pizza-grid">
+                <div class="pizza-card" onclick="agregarPizza('Pizza napolitana', 58)">
+                    <img src="pizzas/napolitana.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza napolitana</h3>
+                        <p>Mozzarella, Jamón y tomate</p>
+                        <div class="pizza-price">
+                            <span class="price">58 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza de margarita', 50)">
+                    <img src="pizzas/margarita1.jpeg">
+                    <div class="pizza-info">
+                        <h3>Pizza de margarita</h3>
+                        <p>Mozzarella, Salsa de tomate en rodajas, oregano</p>
+                        <div class="pizza-price">
+                            <span class="price">50 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza cuatro Quesos', 75)">
+                    <img src="pizzas/4quesos.jpeg">
+                    <div class="pizza-info">
+                        <h3>Pizza cuatro Quesos</h3>
+                        <p>Mozzarella, catupiry, queso cheedar/parmesano</p>
+                        <div class="pizza-price">
+                            <span class="price">75 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza española', 60)">
+                    <img src="pizzas/española.jpeg">
+                    <div class="pizza-info">
+                        <h3>Pizza española</h3>
+                        <p>Mozarrella, Chorizo español, Tomate en rodajas</p>
+                        <div class="pizza-price">
+                            <span class="price">60 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza de pollo Katupiry', 68)">
+                    <img src="pizzas/katupiry.jpeg">
+                    <div class="pizza-info">
+                        <h3>Pizza de pollo Katupiry</h3>
+                        <p>Mozzarella, pollo/katupiry, choclo</p>
+                        <div class="pizza-price">
+                            <span class="price">68 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza americana', 58)">
+                    <img src="pizzas/americana.jpeg">
+                    <div class="pizza-info">
+                        <h3>Pizza americana</h3>
+                        <p>Mozzarella, Peperoni, Champiñones</p>
+                        <div class="pizza-price">
+                            <span class="price">58 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza hawaiana', 60)">
+                    <img src="pizzas/hawaiana.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza hawaiana</h3>
+                        <p>Mozzarella, Jamon piña</p>
+                        <div class="pizza-price">
+                            <span class="price">60 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza cheese burger', 70)">
+                    <img src="pizzas/cheeseburger.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza cheese burger</h3>
+                        <p>Mozzarella, Carne de res, Cheedar/Tocino</p>
+                        <div class="pizza-price">
+                            <span class="price">70 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza de pollo con crema', 68)">
+                    <img src="pizzas/pollocrema.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza de pollo con crema</h3>
+                        <p>Mozzarella, Pollo con choclo, Crema de leche</p>
+                        <div class="pizza-price">
+                            <span class="price">68 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza vegetariana', 60)">
+                    <img src="pizzas/vegetariana.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza vegetariana</h3>
+                        <p>Mozzarella, Tomate en rodajas, Champiñon/Pimentón, Aceitunas</p>
+                        <div class="pizza-price">
+                            <span class="price">60 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="pizza-card" onclick="agregarPizza('Pizza roqueford', 65)">
+                    <img src="pizzas/roqueford.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza roqueford</h3>
+                        <p>Mozzarella, Queso azul/Aceituna negra, Pimentón/Tomate</p>
+                        <div class="pizza-price">
+                            <span class="price">65 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="pizza-card" onclick="agregarPizza('Pizza de frutas', 58)">
+                    <img src="pizzas/pizzafruta.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza de frutas</h3>
+                        <p>Mozzarella, Jamon/Frutilla o Durazno/Salsa dulce</p>
+                        <div class="pizza-price">
+                            <span class="price">58 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza de camarones', 50)">
+                    <img src="pizzas/camarones.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza de camarones</h3>
+                        <p>Mozzarella,Salsa de tomate en rodajas, oregano</p>
+                        <div class="pizza-price">
+                            <span class="price">50 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza de calabressa', 70)">
+                    <img src="pizzas/calabressa.jpeg">
+                    <div class="pizza-info">
+                        <h3>Pizza de calabressa</h3>
+                        <p>Mozzarella, Calabressa, Cebolla sofrita</p>
+                        <div class="pizza-price">
+                            <span class="price">70 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza de barbacoa pollo', 65)">
+                    <img src="pizzas/barbacoapollo.jpeg">
+                    <div class="pizza-info">
+                        <h3>Pizza de barbacoa pollo</h3>
+                        <p>Mozzarella, Salsa de barbacoa, Pollo / Tocino</p>
+                        <div class="pizza-price">
+                            <span class="price">65 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza de barbacoa res', 65)">
+                    <img src="pizzas/barbacoares.jpeg">
+                    <div class="pizza-info">
+                        <h3>Pizza de barbacoa res</h3>
+                        <p>Mozzarella, Carne de res molida, Salsa barbacoa, Tocino</p>
+                        <div class="pizza-price">
+                            <span class="price">65 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pizza-card" onclick="agregarPizza('Pizza de carbonara', 58)">
+                    <img src="pizzas/carbonara.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza de carbonara</h3>
+                        <p>Mozzarella, Champiñon, Tocino</p>
+                        <div class="pizza-price">
+                            <span class="price">58 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Pizza de Charque', 70)">
+                    <img src="pizzas/charque.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza de charque</h3>
+                        <p>Mozzarella, Charque, Tomate en rodajas, Pimiento/Locoto</p>
+                        <div class="pizza-price">
+                            <span class="price">70 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="pizza-card" onclick="agregarPizza('Pizza 4 estaciones', 95)">
+                    <img src="pizzas/4estaciones.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza 4 estaciones</h3>
+                        <p>Hawaiana, Barbacoa de res, 4 quesos española.</p>
+                        <div class="pizza-price">
+                            <span class="price">95 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="pizza-card" onclick="agregarPizza('Pizza de criolla', 58)">
+                    <img src="pizzas/criolla.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza criolla</h3>
+                        <p>Mozzarella, Carne de res, Tomate en rodajas.</p>
+                        <div class="pizza-price">
+                            <span class="price">58 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="pizza-card" onclick="agregarPizza('Pizza tropical', 58)">
+                    <img src="pizzas/trop[ical.jpg">
+                    <div class="pizza-info">
+                        <h3>Pizza tropical</h3>
+                        <p>Mozzarella,Salsa de tomate en rodajas, oregano</p>
+                        <div class="pizza-price">
+                            <span class="price">58 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bebidas Section -->
+    <section class="featured" id="bebidas" style="background: #f0f8ff;">
+        <div class="container">
+            <h2 class="section-title" style="color: #2196f3;">🥤 Nuestras Bebidas</h2>
+            <div class="pizza-grid">
+                <div class="pizza-card" onclick="agregarPizza('Coca Cola Mini', 5)">
+                    <img src="bebidas/cocamini.jpg">
+                    <div class="pizza-info">
+                        <h3>Coca Cola Mini</h3>
+                        <p>Bebida refrescante sabor cola de 250 ml</p>
+                        <div class="pizza-price">
+                            <span class="price">2.50 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Coca-Cola 2L', 12)">
+                    <img src="bebidas/coca2ltrs.jpg">
+                    <div class="pizza-info">
+                        <h3>Coca Cola 2L</h3>
+                        <p>Bebida refrescante sabor cola de 2 litros</p>
+                        <div class="pizza-price">
+                            <span class="price">15 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Coca Cola 3L', 18)">
+                    <img src="bebidas/coca3ltrs.jpg">
+                    <div class="pizza-info">
+                        <h3>Coca Cola 3L</h3>
+                        <p>Bebida refrescante sabor cola de 3 litros</p>
+                        <div class="pizza-price">
+                            <span class="price">17 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Sprite Mini', 5)">
+                    <img src="bebidas/spritemini.jpg">
+                    <div class="pizza-info">
+                        <h3>Sprite Mini</h3>
+                        <p>bebida refrescante sabor lima/limón de 250 ml</p>
+                        <div class="pizza-price">
+                            <span class="price">2.50 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Sprite 2L', 12)">
+                    <img src="bebidas/sprite2ltrs.jpg">
+                    <div class="pizza-info">
+                        <h3>Sprite 2L</h3>
+                        <p>bebida refrescante sabor lima/limón de 2L</p>
+                        <div class="pizza-price">
+                            <span class="price">15 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" onclick="agregarPizza('Sprite 3L', 18)">
+                    <img src="bebidas/sprite3ltrs.jpg">
+                    <div class="pizza-info">
+                        <h3>Sprite 3L</h3>
+                        <p>bebida refrescante sabor lima/limón de 3L</p>
+                        <div class="pizza-price">
+                            <span class="price">17 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="pizza-card" onclick="agregarPizza('Del valle Mini', 2.50)">
+                    <img src="bebidas/delvallemini.jpg">
+                    <div class="pizza-info">
+                        <h3>Del valle Mini</h3>
+                        <p>bebida natural sabor naranja</p>
+                        <div class="pizza-price">
+                            <span class="price">2.50 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="pizza-card" onclick="agregarPizza('Malta real', 7)">
+                    <img src="bebidas/malta.jpg">
+                    <div class="pizza-info">
+                        <h3>Malta real</h3>
+                        <p>bebida energizante</p>
+                        <div class="pizza-price">
+                            <span class="price">7 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="pizza-card" onclick="agregarPizza('Maltin', 7)">
+                    <img src="bebidas/maltin.jpg">
+                    <div class="pizza-info">
+                        <h3>Maltin</h3>
+                        <p>bebida energizante</p>
+                        <div class="pizza-price">
+                            <span class="price">7 bs</span>
+                            <button class="add-btn">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section with Carousel -->
+    <section class="promotions" id="promociones">
+        <h1>¡ NUESTRAS OFERTAS !</h1>
+        
+        <div class="carousel-container">
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <!-- Slide 1 -->
+                <div class="carousel-slide">
+                    <img src="apartados/oferta1.jpg">
+                    <div class="carousel-caption">
+                        <h3>🔥 Descuento Especial</h3>
+                        <p>50% OFF en tu primera compra online</p>
+                        <p class="offer-price">¡Aprovecha!</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <img src="apartados/oferta2.jpg">
+                    <div class="carousel-caption">
+                        <h3>🎉 Descuento Especial por tu cumpleaños🎉</h3>
+                        <p>30% de descuento más una Coca cola de 2l gratis</p>
+                        <p class="offer-price">¡Aprovecha!</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <img src="apartados/oferta3.jpg">
+                    <div class="carousel-caption">
+                        <h3>🔥 3 x 2 Solo en el local</h3>
+                        <p> Por la compra de 3 pizzas por el precio 2</p>
+                        <p class="offer-price">¡Aprovecha!</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                    <img src="apartados/oferta4.jpg">
+                    <div class="carousel-caption">
+                        <h3>🔥 Oferta Especial Solo en el local</h3>
+                        <p>Por la de 3 pizzas se le da una Coca cola de 2L</p>
+                        <p class="offer-price">¡Aprovecha!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pizza Premium</h3>
+                <p>Las mejores pizzas de satelite norte con menus variados. Este local cuenta con delivery propio que garantiza la entrega lo mas pronto posible.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📍uv4 / Avenida Principal Satelite Norte</p>
+                <p>📞 +591 75667833</p>
+                <p>📧 @pizzapremium.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horarios</h3>
+                <p>Lunes a Viernes: 17:00 - 23:00</p>
+                <p>Sabado a Domingo: 11:00 - 23:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">Twitter</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pizza Premium. Todos los derechos reservados.</p>
+        </div>
+
+      
+    </footer>
+
+    <script src="scritp.js"></script>
+</body>
+</html>
